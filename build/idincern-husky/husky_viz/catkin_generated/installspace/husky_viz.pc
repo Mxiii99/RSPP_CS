@@ -1,0 +1,8 @@
+prefix=/home/mx/catkin_ws/install
+
+Name: husky_viz
+Description: Description of husky_viz
+Version: 0.2.2
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

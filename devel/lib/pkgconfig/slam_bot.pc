@@ -1,0 +1,8 @@
+prefix=/home/mx/catkin_ws/devel
+
+Name: slam_bot
+Description: Description of slam_bot
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

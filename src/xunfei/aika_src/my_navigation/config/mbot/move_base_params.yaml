@@ -1,0 +1,33 @@
+shutdown_costmaps: false
+
+oscillation_distance: 0.2
+oscillation_timeout: 0.0  # 恢复机制 陷在方圆oscillation_distance达oscillation_timeout之久，认定机器人在震荡，从而做异常处理
+
+controller_frequency: 10.0 #
+controller_patience: 15.0
+
+planner_frequency: 5.0
+planner_patience: 5.0 #5.0
+max_planning_retries: -1 #最大规划路径的重试次数 -1标识无限次
+base_global_planner: "global_planner/GlobalPlanner"
+base_local_planner: "dwa_local_planner/TebLocalPlannerROS" #最为重要的2个参数，直接指定使用哪种局部规划和全局规划
+
+
+
+#    shutdown_costmaps:当move_base在不活动状态时,是否关掉costmap.
+#
+#    controller_frequency:向底盘控制移动话题cmd_vel发送命令的频率.
+#
+#    controller_patience:在空间清理操作执行前,控制器花多长时间等有效控制下发.
+#
+#    planner_frequency:全局规划操作的执行频率.如果设置为0.0,则全局规划器仅在接收到新的目标点或者局部规划器报告路径堵塞时才会重新执行规划操作.
+#
+#    planner_patience:在空间清理操作执行前,留给规划器多长时间来找出一条有效规划.
+#
+#    oscillation_timeout:执行修复机制前,允许振荡的时长.
+#
+#    oscillation_distance:来回运动在多大距离以上不会被认为是振荡.
+#
+#    base_local_planner:指定用于move_base的局部规划器名称.
+#
+#    base_global_planner:指定用于move_base的全局规划器插件名称.

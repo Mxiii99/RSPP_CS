@@ -1,0 +1,29 @@
+<launch>
+  <node pkg="octomap_server" type="octomap_server_node" name="octomap_server"> 
+ 
+     <!--resolution in meters per pixel-->
+     <!--栅格分辨率，可调-->
+    <param name="resolution" value="0.1" />
+    
+    <!--世界坐标系话题  要调成map-->
+     <!--name of the fixed frame,needs to be "/map" for SLAM-->
+    <param name="frame_id" type="string" value="/map" />
+ 
+     <!--max range/depth resolution of the kinect meters-->
+    <param name="sensor_model/max_range" value="1000.0" />
+    <param name="latch" value="true" />
+ 
+     <!--max/min height for occupancy map, should be in meters-->
+    <param name="pointcloud_max_z" value="2" />
+    <param name="pointcloud_min_z" value="1" />
+ 
+    <param name="graound_filter_angle" value="3.14" />
+    
+     <!--点云消息名称 PointClout2--> 
+     <!--topic from where pointcloud2 messages are subscribed-->
+    <remap from="cloud_in" to="laser_cloud_surround" />
+ 
+  </node>
+ 
+</launch>
+

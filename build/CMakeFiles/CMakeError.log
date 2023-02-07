@@ -1,0 +1,76 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/mx/catkin_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d5471/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d5471.dir/build.make CMakeFiles/cmTC_d5471.dir/build
+make[1]: 进入目录“/home/mx/catkin_ws/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_d5471.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_d5471.dir/CheckSymbolExists.c.o   -c /home/mx/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_d5471
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d5471.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_d5471.dir/CheckSymbolExists.c.o  -o cmTC_d5471 
+CMakeFiles/cmTC_d5471.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x1b)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d5471.dir/build.make:97: recipe for target 'cmTC_d5471' failed
+make[1]: *** [cmTC_d5471] Error 1
+make[1]: 离开目录“/home/mx/catkin_ws/build/CMakeFiles/CMakeTmp”
+Makefile:126: recipe for target 'cmTC_d5471/fast' failed
+make: *** [cmTC_d5471/fast] Error 2
+
+File /home/mx/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/mx/catkin_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a37cc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a37cc.dir/build.make CMakeFiles/cmTC_a37cc.dir/build
+make[1]: 进入目录“/home/mx/catkin_ws/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_a37cc.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a37cc.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a37cc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a37cc.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_a37cc.dir/CheckFunctionExists.c.o  -o cmTC_a37cc -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a37cc.dir/build.make:97: recipe for target 'cmTC_a37cc' failed
+make[1]: *** [cmTC_a37cc] Error 1
+make[1]: 离开目录“/home/mx/catkin_ws/build/CMakeFiles/CMakeTmp”
+Makefile:126: recipe for target 'cmTC_a37cc/fast' failed
+make: *** [cmTC_a37cc/fast] Error 2
+
+
+Determining if the include file pgm.h exists failed with the following output:
+Change Dir: /home/mx/catkin_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_249c8/fast"
+make[1]: 进入目录“/home/mx/catkin_ws/build/CMakeFiles/CMakeTmp”
+/usr/bin/make -f CMakeFiles/cmTC_249c8.dir/build.make CMakeFiles/cmTC_249c8.dir/build
+make[2]: 进入目录“/home/mx/catkin_ws/build/CMakeFiles/CMakeTmp”
+Building CXX object CMakeFiles/cmTC_249c8.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_249c8.dir/CheckIncludeFile.cxx.o -c /home/mx/catkin_ws/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+/home/mx/catkin_ws/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:10: fatal error: pgm.h: 没有那个文件或目录
+ #include <pgm.h>
+          ^~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_249c8.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_249c8.dir/CheckIncludeFile.cxx.o' failed
+make[2]: *** [CMakeFiles/cmTC_249c8.dir/CheckIncludeFile.cxx.o] Error 1
+make[2]: 离开目录“/home/mx/catkin_ws/build/CMakeFiles/CMakeTmp”
+Makefile:126: recipe for target 'cmTC_249c8/fast' failed
+make[1]: *** [cmTC_249c8/fast] Error 2
+make[1]: 离开目录“/home/mx/catkin_ws/build/CMakeFiles/CMakeTmp”
+
+

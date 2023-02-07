@@ -1,0 +1,8 @@
+prefix=/home/mx/catkin_ws/devel
+
+Name: husky_gazebo
+Description: Description of husky_gazebo
+Version: 0.2.6
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,9 @@
+\subsubsection usage Usage
+\verbatim
+<node name="dynamic_tutorials" pkg="dynamic_tutorials" type="dynamic_tutorials">
+  <param name="dir_P" type="double" value="0.0" />
+  <param name="rad_max" type="double" value="4.0" />
+  <param name="speed_max" type="double" value="0.0" />
+</node>
+\endverbatim
+

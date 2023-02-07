@@ -1,0 +1,8 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~dir_P" : \b [double] A double parameter min: 0.0, default: 0.0, max: 100.0
+- \b "~rad_max" : \b [double] A double parameter min: 0.0, default: 4.0, max: 20.0
+- \b "~speed_max" : \b [double] A double parameter min: -1.0, default: 0.0, max: 4.0
+

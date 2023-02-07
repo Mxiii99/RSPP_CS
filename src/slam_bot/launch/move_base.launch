@@ -1,0 +1,36 @@
+<!-- 
+  Simulate a differential drive robot with the dwa_planner in gazebo:
+  - gazebo
+  - map_server
+  - move_base
+  - static map
+  - fake localization
+  - rviz view
+ -->
+<launch>
+
+  <!-- Move base -->
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <rosparam file="$(find slam_bot)/params/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find slam_bot)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find slam_bot)/params/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find slam_bot)/params/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find slam_bot)/params/dwa_planner_params.yaml" command="load" />
+
+    <remap from="cmd_vel" to="/cmd_vel"/>
+    <remap from="odom" to="/odom"/>
+    <remap from="scan" to="/slam_bot/laser/scan"/>
+
+    <param name="base_global_planner" value="global_planner/GlobalPlanner" />
+    <param name="planner_frequency" value="1.0" />
+    <param name="planner_patience" value="5.0" />
+
+    <param name="base_local_planner" value="dwa_planner/DWAPlannerROS" />
+    <param name="controller_frequency" value="5.0" />
+    <param name="controller_patience" value="15.0" />
+    <!--param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS"/-->
+  </node>
+ 
+
+
+</launch>

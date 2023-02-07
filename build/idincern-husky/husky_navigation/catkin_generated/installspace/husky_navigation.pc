@@ -1,0 +1,8 @@
+prefix=/home/mx/catkin_ws/install
+
+Name: husky_navigation
+Description: Description of husky_navigation
+Version: 0.2.7
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

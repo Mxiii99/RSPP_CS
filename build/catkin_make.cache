@@ -1,0 +1,2 @@
+code_in_paper/src/navigation:hello_vscode:idincern-husky/husky_control:idincern-husky/husky_description:idincern-husky/husky_gazebo:idincern-husky/husky_navigation:idincern-husky/husky_viz:idincern-husky/ira_laser_tools:slam_bot:xunfei_record/aika_src/my_navigation:xunfei_record/guyueju_src/gazebo_pkg:xunfei_record/guyueju_src/race_navigation
+-DCATKIN_DEVEL_PREFIX=/home/mx/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mx/catkin_ws/install -G Unix Makefiles
